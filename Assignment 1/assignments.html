@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Bootstrap library-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="jumbotron text-center">
+            <h1>Bootstrap Basic App</h1>
+            <p>Designing Responsive Web Sites</p>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="students.html">Students</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="trainers.html">Trainers</a>
+                    </li>
+                    <li class="nav-item active"> 
+                        <a class="nav-link" href="assignments.html">Assignments</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="assisgnments_per_course.html">Assignments per Course</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="assisgnments_per_student_per_course.html">Assignments per Studen per Course</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="students_per_course.html">Students per Course</a>
+                    </li><li class="nav-item"> 
+                        <a class="nav-link" href="trainers_per_course.html">Trainers per Course</a>
+                    </li>   
+                </ul>
+            </div>
+        </nav><!--End of Navigation Bar-->
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5 offset-lg-1 my-5">
+            <p class="bg-primarey"><strong>Please fill the assignment requirements below:</strong></p>
+            <form action="">
+                <div class="form-group">
+                    <label for="assignment-title">Title:</label>
+                    <input type="text" class="form-control" id="assignment-title" name="assignment-title" required>
+                    <div class="alert alert-danger" id="assignment-title-error">Success or Failure</div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" class="form-control" id="description" name="description" required>
+                </div>
+                <div class="form-group">
+                    <label for="sub-date">Submission Date:</label>
+                    <input type="date" class="form-control" id="sub-date" name="sub-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="oral-mark">Oral Mark:</label>
+                    <input type="number" class="form-control" id="oral-mark" name="oral-mark" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="total-mark">Total Mark:</label>
+                    <input type="number" class="form-control" id="total-mark" name="total-mark" min="20" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+
+        <div class="col-lg-5 offset-lg-1 my-5">
+            <p class="bg-primarey"><strong>Please fill the assignment requirements below:</strong></p>
+            <form action="">
+                <div class="form-group">
+                    <label for="assignment-title-edit">Title:</label>
+                    <input type="text" class="form-control" id="assignment-title-edit" name="assignment-title-edit" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" class="form-control" id="description" name="description" max="300" required>
+                </div>
+                <div class="form-group">
+                    <label for="sub-date">Submission Date:</label>
+                    <input type="date" class="form-control" id="sub-date" name="sub-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="oral-mark">Oral Mark:</label>
+                    <input type="number" class="form-control" id="oral-mark" name="oral-mark" min="1" max="40" required>
+                </div>
+                <div class="form-group">
+                    <label for="total-mark">Total Mark:</label>
+                    <input type="number" class="form-control" id="total-mark" name="total-mark" min="20" max="60" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
+        </div>
+
+        <script>
+            $(function(){
+                $('#assignment-title-error').hide();
+    
+                var error_AssignmentTitle = '';
+                $('#assignment-title').focusout(function(){
+                    checkAssignmentTitle();
+                });
+    
+                function checkAssignmentTitle(){
+                    var pattern = /^[a-zA-Z0-9]*$/;
+                    var AssignmentTitle = $('#assignment-title').val();
+                    console.log(AssignmentTitle);
+                    if (pattern.test(AssignmentTitle) !== '') {
+                        $('#assignment-title-error').hide();
+                        $('#assignment-title').css({"border-bottom": "3px solid #34f458"});
+                        $('input[type=text]').val(function(){
+                            return this.value.toUpperCase();
+                        })
+                    }
+                    else{
+                        $('assignment-title-error').show().html("Should contain only characters!");
+                        error_fname = 'true';
+                    }
+                }
+            });
+
+            $(function(){
+                $('#assignment-title-edit-error').hide();
+    
+                var error_EditAssignmentTitle = '';
+                $('#assignment-title-edit').focusout(function(){
+                    checkEditAssignmentTitle();
+                });
+    
+                function checkEditAssignmentTitle(){
+                    var pattern = /^[a-zA-Z0-9]*$/;
+                    var EditAssignmentTitle = $('#assignment-title-edit').val();
+                    console.log(EditAssignmentTitle);
+                    if (pattern.test(EditAssignmentTitle) !== '') {
+                        $('#assignment-title-edit-error').hide();
+                        $('#assignment-title-edit').css({"border-bottom": "3px solid #34f458"});
+                        $('input[type=text]').val(function(){
+                            return this.value.toUpperCase();
+                        })
+                    }
+                    else{
+                        $('assignment-title-edit-error').show().html("Should contain only characters!");
+                        error_fname = 'true';
+                    }
+                }
+            });
+    
+        </script>
+    </body>
+</html>

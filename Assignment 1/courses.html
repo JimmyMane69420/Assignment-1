@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Bootstrap library-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="jumbotron text-center">
+            <h1>Bootstrap Basic App</h1>
+            <p>Designing Responsive Web Sites</p>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active"> 
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="students.html">Students</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="trainers.html">Trainers</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="assignments.html">Assignments</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="assisgnments_per_course.html">Assignments per Course</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="assisgnments_per_student_per_course.html">Assignments per Studen per Course</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="students_per_course.html">Students per Course</a>
+                    </li><li class="nav-item"> 
+                        <a class="nav-link" href="trainers_per_course.html">Trainers per Course</a>
+                    </li>   
+                </ul>
+            </div>
+        </nav><!--End of Navigation Bar-->
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Bootcamp Courses</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>16 h</td>
+                        <td><button type="button">Trainers</button></td>
+                        <td><button type="button">Students</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bootstrap I</td>
+                        <td>8 h</td>
+                        <td><button type="button">Trainers</button></td>
+                        <td><button type="button">Students</button></td>
+                    </tr>
+                    <tr>
+                        <td>CSS & Html</td>
+                        <td>30 h</td>
+                        <td><button type="button">Trainers</button></td>
+                        <td><button type="button">Students</button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lgl-3">
+            <div class="alert alert-info">
+            <ul class="list-group" id="javascript-trainers">
+                <li class="list-group-item">Flavio Marinero</li>
+                <li class="list-group-item">George Pasparakis</li>
+                <li class="list-group-item">Elena Kapetaraki</li>
+            </ul>
+            <ul class="list-group" id="bootstrap-trainers">
+                <li class="list-group-item">George Poikilos</li>
+                <li class="list-group-item">R Hagos</li>
+                <li class="list-group-item">Elena Georgiou</li>
+            </ul>
+            <ul class="list-group" id="html-css-trainers">
+                <li class="list-group-item">Andreas Bourzoukos</li>
+                <li class="list-group-item">Grigorios Ladas</li>
+                <li class="list-group-item">Georege Azakas</li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-lgl-3">
+            <div class="alert alert-info">
+                <ul class="list-group" id="javascript-students">
+                    <li class="list-group-item">Flavio Marinero</li>
+                    <li class="list-group-item">George Pasparakis</li>
+                    <li class="list-group-item">Elena Kapetaraki</li>
+                </ul>
+                <ul class="list-group" id="bootstrap-students">
+                    <li class="list-group-item">Angelos Kovatsis</li>
+                    <li class="list-group-item">Andreas Tsarouchas</li>
+                    <li class="list-group-item">Efi Gavrielatou</li>
+                </ul>
+                <ul class="list-group" id="html-css-students">
+                    <li class="list-group-item">Andreas Bourzoukos</li>
+                    <li class="list-group-item">Grigorios Ladas</li>
+                    <li class="list-group-item">Georege Azakas</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-5 offset-md-1">
+            <p class="bg-primarey"><strong>Please fill the course details below:</strong></p>
+            <form action="">
+                <div class="form-group">
+                    <label for="course-title">Title:</label>
+                    <input type="text" class="form-control" id="course-title" name="course-title" required>
+                    <div class="alert alert-danger" id="course-title-error">Success or Failure</div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" class="form-control" id="description" name="description" max="300" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label> 
+                    <input type="checkbox" name="javascript" id="javascript-type" value="javascript">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" name="bootstrap" id="bootstrap" value="bootstrap">
+                    <label for="bootstrap">Bootstrap</label>
+                    <input type="checkbox" name="CSS & Html" id="CSS & Html" value="CSS & Html">
+                    <label for="CSS & Html">CSS & Html</label>                 
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Starting Date:</label>
+                    <input type="date" class="form-control" id="start-date" name="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">Submission Date:</label>
+                    <input type="date" class="form-control" id="end-date" name="end-date" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        
+        </div>
+        <div class="col-lg-5">
+            <p class="bg-primarey"><strong>Please fill the Course details below:</strong></p>
+            <form action="">
+                <div class="form-group">
+                    <label for="assignment-title-edit">Title:</label>
+                    <input type="text" class="form-control" id="assignment-title-edit" name="assignment-title-edit" required>
+                </div>
+                <div class="form-group">
+                    <label for="description-edit">Description:</label>
+                    <input type="text" class="form-control" id="description-edit" name="description-edit" max="300" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label> 
+                    <input type="checkbox" name="javascript" id="javascript-type" value="javascript">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" name="bootstrap" id="bootstrap" value="bootstrap">
+                    <label for="bootstrap">Bootstrap</label>
+                    <input type="checkbox" name="CSS & Html" id="CSS & Html" value="CSS & Html">
+                    <label for="CSS & Html">CSS & Html</label>                 
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Starting Date:</label>
+                    <input type="date" class="form-control" id="start-date" name="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">Ending Date:</label>
+                    <input type="date" class="form-control" id="end-date" name="end-date" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
+        </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#javascript-trainers').hide();
+            $('button:eq(1)').click(() => $('#javascript-trainers').slideToggle(1000, 'swing'));
+        })
+        $(document).ready(function(){
+            $('#bootstrap-trainers').hide();
+            $('button:eq(2)').click(() => $('#bootstrap-trainers').slideToggle(1000, 'swing'));
+        })
+        $(document).ready(function(){
+            $('#html-css-trainers').hide();
+            $('button:eq(3)').click(() => $('#html-css-trainers').slideToggle(1000, 'swing'));
+        })
+        $(document).ready(function(){
+            $('#javascript-students').hide();
+            $('button:eq(4)').click(() => $('#javascript-students').slideToggle(1000, 'swing'));
+        })
+        $(document).ready(function(){
+            $('#bootstrap-students').hide();
+            $('button:eq(5)').click(() => $('#bootstrap-students').slideToggle(1000, 'swing'));
+        })
+        $(document).ready(function(){
+            $('#html-css-students').hide();
+            $('button:eq(6)').click(() => $('#html-css-students').slideToggle(1000, 'swing'));
+        })
+
+        //Add Error Checks
+        $(function(){
+            $('#course-title-error').hide();
+
+            var error_coursetittle = '';
+            $('#course-title').focusout(function(){
+                checkAssignmentTitle();
+            });
+
+            function checkAssignmentTitle(){
+                var pattern = /^[a-zA-Z]*$/;
+                var coursetitle = $('#course-title').val();
+                console.log(coursetitle);
+                if (pattern.test(coursetitle) !== '') {
+                    $('#course-tittle-error').hide();
+                    $('#course-tittle').css({"border-bottom": "3px solid #34f458"});
+                    $('input[type=text]').val(function(){
+                        return this.value.toUpperCase();
+                    })
+                }
+                else{
+                    $('course-title-error').show().html("Should contain only characters!");
+                    error_coursetittle = 'true';
+                }
+            }
+        });
+        
+        $(function(){
+            $('#description-error').hide();
+
+            var error_description = '';
+            $('#description').focusout(function(){
+                checkDescription();
+            });
+
+            function checkDescription(){
+                var pattern = /^[a-zA-Z]*$/;
+                var description = $('#description').val();
+                console.log(description);
+                if (pattern.test(description) !== '') {
+                    $('#description-error').hide();
+                    $('#description').css({"border-bottom": "3px solid #34f458"});
+                    $('input[type=text]').val(function(){
+                        return this.value.toUpperCase();
+                    })
+                }
+                else{
+                    $('lastname-error').show().html("Should contain only characters!");
+                    error_description = 'true';
+                }
+            }
+        });
+        //Edits Error Check
+        $(function(){
+            $('#assignment-title-edit-error').hide();
+
+            var error_editassignmenttitle = '';
+            $('#assignment-title-edit').focusout(function(){
+                checkEditAssignmentTitle();
+            });
+
+            function checkEditAssignmentTitle(){
+                var pattern = /^[a-zA-Z]*$/;
+                var editassignmenttitle = $('#assignment-title-edit').val();
+                console.log(assignmenttitle);
+                if (pattern.test(assignmenttitle) !== '') {
+                    $('#assignment-title-edit-error').hide();
+                    $('#assignment-title-edit').css({"border-bottom": "3px solid #34f458"});
+                    $('input[type=text]').val(function(){
+                        return this.value.toUpperCase();
+                    })
+                }
+                else{
+                    $('assignment-title-error').show().html("Should contain only characters!");
+                    error_editassignmenttitle = 'true';
+                }
+            }
+        });
+
+
+        $(function(){
+            $('#description-edit-error').hide();
+
+            var error_editdescription = '';
+            $('#description-edit').focusout(function(){
+                checkEditDescription();
+            });
+
+            function checkEditDescription(){
+                var pattern = /^[a-zA-Z]*$/;
+                var editdescription = $('#description-edit').val();
+                console.log(editdescription);
+                if (pattern.test(editdescription) !== '') {
+                    $('#description-edit-error').hide();
+                    $('#description-edit').css({"border-bottom": "3px solid #34f458"});
+                    $('input[type=text]').val(function(){
+                        return this.value.toUpperCase();
+                    })
+                }
+                else{
+                    $('description-edit-error').show().html("Should contain only characters!");
+                    error_editdescription = 'true';
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
